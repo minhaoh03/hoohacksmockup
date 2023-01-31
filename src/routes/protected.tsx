@@ -1,5 +1,6 @@
 export const protectedRoutes = [
     {
-        path: '/app'
+        path: '/app',
+        element: 
     }
 ]
