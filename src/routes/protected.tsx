@@ -1,6 +1,8 @@
+import { GameRoutes } from "../features/game/routes"
+
 export const protectedRoutes = [
     {
-        path: '/app',
-        element: 
+        path: '/game',
+        element: <GameRoutes/>
     }
 ]
