@@ -1,19 +1,16 @@
-import { UseFormReturn, useForm } from "react-hook-form"
 import React from 'react';
 
-type FormProps<TFormValues> = {
-    children: (methods: UseFormReturn<TFormValues>) => React.ReactNode;
+type FormProps = {
+    children: React.ReactNode
+    onSubmit: () => 
 }
 
-export const Form = <                                                           //Ya gotta understand what is going on here...
-    TFormValues extends Record<string, unknown> = Record<string, unknown>
-> ({
+export const Form = ({
     children,
-}: FormProps<TFormValues>) => {
-    const methods = useForm<TFormValues>()
+}: FormProps) => {
     return (
-        <form> 
-            {children(methods)}
+        <form>
+            {children}
         </form>
     )
 }
