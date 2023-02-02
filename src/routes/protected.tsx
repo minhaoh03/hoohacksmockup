@@ -2,7 +2,7 @@ import { GameRoutes } from "../features/game/routes"
 
 export const protectedRoutes = [
     {
-        path: '/game',
+        path: '/game/*',
         element: <GameRoutes/>
     }
 ]

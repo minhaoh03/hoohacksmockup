@@ -3,7 +3,7 @@ import { ImageList } from '../../images'
 
 export const Game = () => {
     return (
-        <div>
+        <div className='h-content'>
             <Map/>
             <ImageList/>
         </div>

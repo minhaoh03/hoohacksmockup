@@ -1,5 +1,18 @@
-export const Button = () => {
+type ButtonProps = {
+    className?: string
+    type: "button" | "submit"
+    name: string
+}
+
+export const Button = ({ 
+    className, type, name
+}: ButtonProps) => {
     return (
-        <button> </button>
+        <button
+            type={type}
+            className={className}
+        >
+            {name}
+        </button>
     )  
 }

@@ -2,7 +2,7 @@ import { AuthRoutes } from '../features/landing'
 
 export const publicRoutes = [
     {
-        path: '/',
+        path: '/*',
         element: <AuthRoutes/>
     }
 ]
