@@ -1,1 +1,2 @@
-export * from './EmailForm'
+export * from './LoginForm'
+export * from './RegisterForm'

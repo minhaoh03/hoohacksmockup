@@ -1,11 +1,11 @@
-import { useNavigate } from "react-router-dom";
-
-import { EmailForm } from "../components/EmailForm"
+import { LoginForm } from "../components/LoginForm"
+import { setAuth } from "../../../lib/auth";
 
 export const Login = () => {
-    const navigate = useNavigate();
 
     return (
-        <EmailForm onSuccess={() => navigate('/verification')} />
+        <LoginForm verify={async () => {
+            await setAuth()
+            }} />
     )
 }
