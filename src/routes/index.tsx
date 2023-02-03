@@ -5,7 +5,6 @@ import { getAuth } from '../lib/auth'
 
 export const AppRoutes = () => {
     const authorized = getAuth()
-    console.log(authorized)
     //change true to false to check verification pages
     const routes = authorized ? protectedRoutes : publicRoutes
 

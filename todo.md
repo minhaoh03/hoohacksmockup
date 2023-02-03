@@ -1,7 +1,7 @@
 # TODO LIST
 
-[] Register/Login Page Authorization
-[] Finish map with images
+[x] Register/Login Page Authorization
+[x] Finish map with images
 [] Images page
  - Date
     [] Image submission form popup
