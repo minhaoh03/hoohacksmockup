@@ -2,7 +2,7 @@
 
 [x] Register/Login Page Authorization
 [x] Finish map with images
-[] Images page
+[x] Images page
  - Date
     [] Image submission form popup
      - Get point or not

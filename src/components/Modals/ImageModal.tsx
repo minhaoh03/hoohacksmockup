@@ -1,25 +1,30 @@
 import { Img } from "../Elements"
-import React, { SyntheticEvent } from "react"
+import React, { useState } from "react"
+import { DescModal } from "./DescModal"
+import { Button } from "../Elements"
 
 type ImageModalProps = {
     open: boolean
     info: {
-        img: string
+        src: string
+        desc: string
+        date: Date
     }
+    setModalOpen: (value: boolean) => void
 }
 
-export const ImageModal = ({ open, info }: ImageModalProps) => {
-    const clickRef = React.useRef() as React.MutableRefObject<HTMLInputElement>
-    function handleClickOutside(event: Event) {
-        if (clickRef.current && !clickRef.current.contains(event.target as Node)) {
-            alert("You clicked outside of me!");
-        }
-    }
+export const ImageModal = ({ open, info, setModalOpen }: ImageModalProps) => {
+    const [descOpen, setDescOpen] = useState(false)
     
-    document.addEventListener("mousedown", handleClickOutside);
-    return (
-        <div ref={clickRef} className='fixed top-[7.5%] left-[7.5%] h-[95%] w-[95%] z-20'>
-            {open && <Img src={info.img} className={'h-[90%] w-[90%]'} alt='Clicked on image' />}
-        </div>
-    )
+    if(open) {
+        return (
+            <div className='fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 aspect-[9/16] h-[80%] z-20'>
+                <Button type='button' name='X' onClick={() => {setModalOpen(!open)}} className="absolute top-[0%] left-[5px]"/>
+                <Img src={info.src} onClick={() => {setDescOpen(!descOpen)}} className={'h-full w-full'} alt='Clicked on image' />
+                <DescModal info={info} descOpen={descOpen} setDescOpen={setDescOpen}/>
+            </div>
+        )
+    } else {
+        return null
+    }
 }
