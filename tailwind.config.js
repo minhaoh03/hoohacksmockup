@@ -10,7 +10,12 @@ module.exports = {
             'lg': '768px',
             'xl': '992px',
         },
-        extend: {},
+        extend: {
+            fontFamily: {
+                'montser': ['Montserrat', 'sans-serif'],
+                'lato': ['Lato', 'sans-serif']
+            },
+        },
     },
         plugins: [],
 }

@@ -1,5 +1,11 @@
+import { BackBtn } from "../components/BackBtn"
+
 export const Profile = () => {
     return (
-        <span>Profile</span>
+        <>
+            <BackBtn/>
+            <br/>
+            <span>Profile</span>
+        </>
     )
 }

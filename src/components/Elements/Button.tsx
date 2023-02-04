@@ -1,13 +1,13 @@
 type ButtonProps = {
     className?: string
-    type: "button" | "submit"
+    type?: "button" | "submit"
     name?: string
     onClick?: () => void
     children?: React.ReactElement<any, any>
 }
 
 export const Button = ({ 
-    className, type, name, onClick, children
+    className, type = 'button', name, onClick, children
 }: ButtonProps) => {
     return (
         <button

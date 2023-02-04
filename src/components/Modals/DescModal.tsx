@@ -27,10 +27,10 @@ export const DescModal = ({info, descOpen, setDescOpen}: DescModalProps) => {
 
     if(descOpen) {
         return (
-            <div className="absolute z-40 w-full top-[60%] h-[40%] border-2 bg-black/[.5] z-10" onClick={() => {setDescOpen(!descOpen)}}>
-                <span>{info.desc}</span>
-                <br/>
-                <span>{info.date.toString()}</span>
+            <div className="absolute z-40 w-full top-[60%] h-[40%] text-white bg-black/[.5] rounded-b-xl z-10 font-lato pt-4 px-3" onClick={() => {setDescOpen(!descOpen)}}>
+                <span className="block text-4xl mb-10">{info.desc}</span>
+
+                <span className="block bottom-5px">{info.date.toString()}</span>
                 <Form onSubmit={() => handleSubmit()}>
                     <>
                         <Img src='https://cdn-icons-png.flaticon.com/512/2810/2810451.png' alt='upload button' onClick={(e: React.MouseEvent<HTMLElement>) => {handleUpload(e)}} className="absolute w-12 h-12 bottom-[10%] left-1/2 transform -translate-x-1/2 z-30"/>

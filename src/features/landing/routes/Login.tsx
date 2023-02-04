@@ -4,8 +4,10 @@ import { setAuth } from "../../../lib/auth";
 export const Login = () => {
 
     return (
-        <LoginForm verify={async () => {
-            await setAuth()
+        <div className="bg-sky-200 h-screen">
+            <LoginForm verify={async () => {
+                await setAuth()
             }} />
+        </div>
     )
 }

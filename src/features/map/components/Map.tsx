@@ -26,7 +26,7 @@ export const Map = ({
     const apiKey = process.env.REACT_APP_GOOGLE_API_KEY as string
 
     return (
-        <div className='sticky top-0 border-b-2 border-gray-300 w-full'>
+        <div className='sticky top-0 border-b-2 border-emerald-500 w-full'>
             <LoadScript
                 googleMapsApiKey={apiKey}
             >

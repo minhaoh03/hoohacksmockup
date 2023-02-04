@@ -1,5 +1,12 @@
+import { BackBtn } from "../components/BackBtn"
+
 export const Leaderboard = () => {
     return (
-        <span>Leaderboard</span>
+        <>
+            <BackBtn/>
+            <br/>
+            <span>Leaderboard</span>
+        </>
+        
     )
 }

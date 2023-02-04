@@ -103,8 +103,8 @@ export const ImageList = ({open, setModalOpen, setModalInfo}: ImageListProps) =>
     }
 
     return (
-        <div className="flex flex-wrap items-center justify-items-center h-[45%] w-full overscroll-contain">
-            {imgs.map((img, index) => {return (<Img src={img.src} alt={'idk'} key={index} onClick={() => {handleModal(img)}} className={'ml-[6.25%] mt-8 w-1/4 aspect-square object-cover'}/>)})}
+        <div className="flex flex-wrap items-center justify-items-center h-[45%] w-full overscroll-contain bg-emerald-200/[.5]">
+            {imgs.map((img, index) => {return (<Img src={img.src} alt={'idk'} key={index} onClick={() => {handleModal(img)}} className={'ml-[6.25%] mt-8 w-1/4 aspect-square object-cover border-4 rounded-xl border-sky-200'}/>)})}
         </div>
     )
 }
